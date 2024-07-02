@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HNG 11 task_2</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mediaquery.css" />
+  </head>
+  <body>
+    <div class="content">
+      <!-- main -->
+      <div class="main-content">
+        <div class="top_navigation">
+          <header>
+            <div class="navigation_bar">
+              <div class="left_content">
+                <div class="brand">
+                  <a href="./index.html"
+                    ><h2 data-testid="slackDisplayName">wisdom.jsx</h2></a
+                  >
+                </div>
+                <div class="menu">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+              <div class="right_content">
+                <ul>
+                  <li><a href="#my_goals">Goals</a></li>
+                  <li><a href="#footer">Useful Links</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        </div>
+        <!-- time section -->
+        <div class="time-section">
+          <div class="time">
+            <p data-testid="currentTimeUTC">
+              Current Time (UTC): <span id="current-time"></span>
+            </p>
+            <p data-testid="currentDay">
+              Current Day: <span id="current-day"></span>
+            </p>
+          </div>
+        </div>
+        <!-- intro -->
+        <div>
+          <div class="intro_section">
+            <img
+              data-testid="slackProfilePicture"
+              src="./images/profile.jpg"
+              alt="profile"
+            />
+            <div>
+              <h1 class="greetings">Hello,</h1>
+              <p class="heading_description">
+                I am a passionate developer eager to expand my knowledge.
+                Currently a frontend developer, I am excited to transition into
+                a full-stack role, constantly learning and growing.
+              </p>
+            </div>
+          </div>
+          <button id="scroll_down_btn">Learn More</button>
+        </div>
+        <!-- my goals section -->
+        <div id="my_goals">
+          <div id="learn_more_section"></div>
+
+          <section id="my_goals">
+            <h2 class="goal_heading">My Tech Goals</h2>
+            <div class="goals-container">
+              <div class="goal-card">
+                <h3>Advancing in Frontend</h3>
+                <p>
+                  As a passionate frontend developer, my goal for the next two
+                  years is to deepen my expertise in modern web technologies and
+                  push the boundaries of what's possible with frontend
+                  development.
+                </p>
+                <button class="read-more-btn">Read More</button>
+              </div>
+              <div class="goal-card">
+                <h3>Expand React Knowledge</h3>
+                <p>
+                  React has become the widely accepted and preferred choice for
+                  building modern web applications, and mastering this powerful
+                  library is crucial for any frontend developer.
+                </p>
+                <button class="read-more-btn">Read More</button>
+              </div>
+              <div class="goal-card">
+                <h3>Get a Job</h3>
+                <p>
+                  Ultimately, my journey in the tech field is driven by the goal
+                  of securing a fulfilling job and to contribute to innovative
+                  projects.
+                </p>
+                <button class="read-more-btn">Read More</button>
+              </div>
+              <div class="goal-card">
+                <h3>Venturing Backend</h3>
+                <p>
+                  While my primary focus has been on frontend development, I
+                  recognize the importance of having a solid understanding of
+                  backend technologies to become a well-rounded and versatile
+                  developer.
+                </p>
+                <button class="read-more-btn">Read More</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="goalModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <ul id="modalList"></ul>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer_links">
+        <a href="https://hng.tech" target="_blank" data-testid="hngLink"
+          >HNG Tech</a
+        >
+        <div class="divider"></div>
+        <a href="https://hng.tech/learn" target="_blank" data-testid="hngLink"
+          >HNG Learn</a
+        >
+        <div class="divider"></div>
+        <a
+          href="https://hng.tech/internship"
+          target="_blank"
+          data-testid="hngLink"
+          >HNG Internship</a
+        >
+        <div class="divider"></div>
+        <a href="https://hng.tech/premium" target="_blank" data-testid="hngLink"
+          >HNG Premium Network</a
+        >
+        <div class="divider"></div>
+        <a href="https://keyword.dog" target="_blank" data-testid="keywordLink"
+          >Keyword Dog</a
+        >
+        <div class="divider"></div>
+        <a
+          href="https://scrapeanyweb.site"
+          target="_blank"
+          data-testid="scrapeanywebLink"
+          >Scrape Any Web</a
+        >
+        <div class="divider"></div>
+        <p data-testid="slackEmail">wisdom12ekene@gmail.com</p>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
