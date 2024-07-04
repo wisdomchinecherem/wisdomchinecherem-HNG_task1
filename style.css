@@ -380,3 +380,7 @@ footer
     color: var(--subtle-white);
   }
 }
+
+.email {
+  pointer-events: none;
+}
