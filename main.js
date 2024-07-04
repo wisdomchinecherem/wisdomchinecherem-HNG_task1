@@ -23,18 +23,18 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // Time update
-
-  const currentTimeElement = document.getElementById("current-time");
-  const currentDayElement = document.getElementById("current-day");
-
+  
   function updateTime() {
+    const currentTimeElement = document.getElementById("current-time");
+    const currentDayElement = document.getElementById("current-day");
+
     const now = new Date();
-    console.log("Local time:", now);
 
-    const utcTime = now.toISOString().slice(11, 19);
-    console.log("UTC time:", utcTime);
+    const hours = now.getUTCHours().toString().padStart(2, "0");
+    const minutes = now.getUTCMinutes().toString().padStart(2, "0");
+    const seconds = now.getUTCSeconds().toString().padStart(2, "0");
 
-    const dayNames = [
+    const days = [
       "Sunday",
       "Monday",
       "Tuesday",
@@ -43,15 +43,15 @@ window.addEventListener("DOMContentLoaded", () => {
       "Friday",
       "Saturday",
     ];
-    const currentDay = dayNames[now.getUTCDay()];
-    console.log("Current day:", currentDay);
+    const day = days[now.getDate()];
 
-    currentTimeElement.textContent = utcTime;
-    currentDayElement.textContent = currentDay;
+    currentTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
+    currentDayElement.textContent = day;
   }
 
-  updateTime();
   setInterval(updateTime, 1000);
+  updateTime();
+
   // Modal
 
   const modal = document.getElementById("goalModal");
